@@ -13,6 +13,11 @@ export const MENU_ITEMS: NbMenuItem[] = [
     link: '/pages/iot-dashboard',
   },
   {
+    title: 'Home',
+    icon: 'nb-home',
+    link: '/pages/home',
+  },
+  {
     title: 'FEATURES',
     group: true,
   },
