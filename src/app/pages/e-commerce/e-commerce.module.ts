@@ -46,6 +46,11 @@ import { EarningPieChartComponent } from './earning-card/back-side/earning-pie-c
 import { EarningCardFrontComponent } from './earning-card/front-side/earning-card-front.component';
 import { EarningLiveUpdateChartComponent } from './earning-card/front-side/earning-live-update-chart.component';
 import { KittenComponent } from './kitten/kitten.component';
+import { TreeGraph } from './tree-graph/tree-graph.component';
+import { SkillGraph } from './skill-graph/skill-graph.component';
+import { SkillPara } from './skill-para/skill-para.component';
+import { SkillSummary } from './skill-summary/skill-summary.component';
+import { SkillWordCloud } from './skill-word-cloud/skill-word-cloud.component';
 
 @NgModule({
   imports: [
@@ -88,7 +93,12 @@ import { KittenComponent } from './kitten/kitten.component';
     EarningCardBackComponent,
     EarningPieChartComponent,
     EarningLiveUpdateChartComponent,
-    KittenComponent
+    KittenComponent,
+    TreeGraph,
+    SkillPara,
+    SkillGraph,
+    SkillSummary,
+    SkillWordCloud
   ],
   providers: [
     CountryOrdersMapService,
