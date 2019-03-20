@@ -59,6 +59,7 @@ import { SkillWordCloud } from './skill-word-cloud/skill-word-cloud.component';
     NgxEchartsModule,
     NgxChartsModule,
     LeafletModule,
+
   ],
   declarations: [
     ECommerceComponent,

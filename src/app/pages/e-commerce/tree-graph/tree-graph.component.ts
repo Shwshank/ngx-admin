@@ -159,7 +159,7 @@ export class TreeGraph implements OnInit  {
            {
              type: 'tree',
              data: [this.treeData],
-             top: '2%',
+             top: '0%',
              left: '10%',
              bottom: '2%',
              right: '10%',
