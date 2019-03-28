@@ -51,6 +51,7 @@ import { SkillGraph } from './skill-graph/skill-graph.component';
 import { SkillPara } from './skill-para/skill-para.component';
 import { SkillSummary } from './skill-summary/skill-summary.component';
 import { SkillWordCloud } from './skill-word-cloud/skill-word-cloud.component';
+import { ProjectComponent } from './security-cameras/security-cameras.component';
 
 @NgModule({
   imports: [
@@ -99,7 +100,8 @@ import { SkillWordCloud } from './skill-word-cloud/skill-word-cloud.component';
     SkillPara,
     SkillGraph,
     SkillSummary,
-    SkillWordCloud
+    SkillWordCloud,
+    ProjectComponent
   ],
   providers: [
     CountryOrdersMapService,

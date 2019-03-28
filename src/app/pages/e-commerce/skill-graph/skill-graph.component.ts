@@ -15,7 +15,6 @@ export class SkillGraph implements OnInit  {
 
   options: any;
 
-  constructor() { }
 
   ngOnInit() {
     let hours = ['12a', '1a', '2a', '3a', '4a', '5a', '6a',
