@@ -8,6 +8,7 @@ import { ThemeModule } from '../@theme/theme.module';
 import { MiscellaneousModule } from './miscellaneous/miscellaneous.module';
 
 import { HomeModule } from './home/home.module';
+import { Home1Module } from './home1/home1.module';
 
 const PAGES_COMPONENTS = [
   PagesComponent,
@@ -20,7 +21,8 @@ const PAGES_COMPONENTS = [
     DashboardModule,
     ECommerceModule,
     MiscellaneousModule,
-    HomeModule
+    HomeModule,
+    Home1Module
   ],
   declarations: [
     ...PAGES_COMPONENTS,

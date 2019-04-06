@@ -7,6 +7,14 @@
   justify-content: space-between;
   width: 100%;
 
+  .nb-theme-default nb-search button {
+    color: pink !important;
+  }
+
+  i.nb-search{
+    color: pink !important;
+  }
+
   .left {
     display: flex;
     width: 100%;

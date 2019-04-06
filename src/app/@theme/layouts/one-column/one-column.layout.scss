@@ -62,6 +62,10 @@
         height:
           calc(#{nb-theme(sidebar-height)} - #{nb-theme(header-height)}) !important;
       }
+      & nb-menu .menu-item .menu-icon.fa {
+        font-size: 1.7rem;
+        line-height: 2rem;
+      }
     }
 
     /deep/ .scrollable {
