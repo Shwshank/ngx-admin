@@ -10,22 +10,22 @@ export const MENU_ITEMS: NbMenuItem[] = [
   {
     title: 'Projects',
     icon: 'fa fa-cubes',
-    link: '/pages/home',
+    link: '/pages/projects',
   },
   {
     title: 'Frameworks',
     icon: 'fa fa-code',
-    link: '/pages/home',
+    link: '/pages/js',
   },
   {
     title: 'Sawtooth',
     icon: 'fa fa-link',
-    link: '/pages/home',
+    link: '/pages/skill',
   },
   {
     title: 'Orgnisations',
     icon: 'fa fa-building',
-    link: '/pages/home',
+    link: '/pages/orgs',
   },
   {
     title: 'Me',

@@ -9,6 +9,10 @@ import { MiscellaneousModule } from './miscellaneous/miscellaneous.module';
 
 import { HomeModule } from './home/home.module';
 import { Home1Module } from './home1/home1.module';
+import { ProjectsModule } from './projects/projects.module';
+import { JsModule } from './js/js.module';
+import { SkillModule } from './skill/skill.module';
+import { CompaniesModule } from './companies/companies.module';
 
 const PAGES_COMPONENTS = [
   PagesComponent,
@@ -22,7 +26,11 @@ const PAGES_COMPONENTS = [
     ECommerceModule,
     MiscellaneousModule,
     HomeModule,
-    Home1Module
+    Home1Module,
+    ProjectsModule,
+    JsModule,
+    SkillModule,
+    CompaniesModule
   ],
   declarations: [
     ...PAGES_COMPONENTS,
