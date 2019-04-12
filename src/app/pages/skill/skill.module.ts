@@ -6,6 +6,7 @@ import { ChartModule } from 'angular2-chartjs';
 
 import { ThemeModule } from '../../@theme/theme.module';
 import { SkillComponent } from './skill.component';
+import { SkillPara } from './skill-para/skill-para.component';
 
 @NgModule({
   imports: [
@@ -17,6 +18,7 @@ import { SkillComponent } from './skill.component';
 
   ],
   declarations: [
+    SkillPara,
     SkillComponent
   ]
 })

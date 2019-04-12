@@ -6,6 +6,8 @@ import { ChartModule } from 'angular2-chartjs';
 
 import { ThemeModule } from '../../@theme/theme.module';
 import { ProjectsComponent } from './projects.component';
+import { ProjectComponent } from './project/project.component';
+
 
 @NgModule({
   imports: [
@@ -17,7 +19,8 @@ import { ProjectsComponent } from './projects.component';
 
   ],
   declarations: [
-    ProjectsComponent
+    ProjectsComponent,
+    ProjectComponent
   ]
 })
 export class ProjectsModule { }

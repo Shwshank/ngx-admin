@@ -1,0 +1,45 @@
+body { font-family: Helvetica; }
+
+div {
+  width: 70vw;
+  margin: auto;
+}
+
+.brandBox{
+
+  border-top: 3px dashed;
+  border-color: #e20f44 !important;
+  margin:0; padding: 20px;
+  height:200px;
+  width: 100%;
+  text-align: center;
+}
+
+
+
+.brandBox:nth-child(odd) {
+  border-left: 3px dashed;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+  margin-right: 30px;
+  padding-right: 0;
+}
+
+.brandBox:nth-child(even) {
+  border-right: 3px dashed;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+  margin-left: 30px;
+  padding-left: 0;
+}
+
+.brandBox:first-child {
+  border-top: 0;
+  border-top-right-radius:0;
+  border-top-left-radius:0;
+}
+
+.brandBox:last-child {
+  border-bottom-right-radius:0;
+  border-bottom-left-radius:0;
+}

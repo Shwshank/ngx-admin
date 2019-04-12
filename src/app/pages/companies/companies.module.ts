@@ -6,6 +6,7 @@ import { ChartModule } from 'angular2-chartjs';
 
 import { ThemeModule } from '../../@theme/theme.module';
 import { CompaniesComponent } from './companies.component';
+import { OrgListComponent } from './org-list/org-list.component';
 
 @NgModule({
   imports: [
@@ -17,7 +18,8 @@ import { CompaniesComponent } from './companies.component';
 
   ],
   declarations: [
-    CompaniesComponent
+    CompaniesComponent,
+    OrgListComponent
   ]
 })
 export class CompaniesModule { }
