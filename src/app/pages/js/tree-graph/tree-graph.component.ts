@@ -3,6 +3,7 @@ import { AfterViewInit, Component, Input, OnDestroy, OnInit } from '@angular/cor
 import { NbThemeService } from '@nebular/theme';
 import { LayoutService } from '../../../@core/utils';
 import { OutlineData } from '../../../@core/data/visitors-analytics';
+import { JsComponent } from '../js.component';
 
 @Component({
   selector: 'ngx-tree-graph',
@@ -18,130 +19,53 @@ export class TreeGraph implements OnInit  {
   option2: any;
   treeData: any;
 
-  constructor() {
+  constructor(private jsComponent: JsComponent) {
     this.treeData = {
- "name": "flare",
- "children": [
-  {
-   "name": "analytics",
-   "collapsed": true,
-   "children": [
-    {
-     "name": "cluster",
-     "children": [
-      {"name": "AgglomerativeCluster", "value": 3938},
-      {"name": "CommunityStructure", "value": 3812},
-      {"name": "HierarchicalCluster", "value": 6714},
-      {"name": "MergeEdge", "value": 743}
-     ]
-    },
-    {
-     "name": "graph",
-     "collapsed": true,
-     "children": [
-      {"name": "BetweennessCentrality", "value": 3534},
-      {"name": "LinkDistance", "value": 5731},
-      {"name": "MaxFlowMinCut", "value": 7840},
-      {"name": "ShortestPaths", "value": 5914},
-      {"name": "SpanningTree", "value": 3416}
-     ]
-    },
-    {
-     "name": "optimization",
-     "collapsed": true,
-     "children": [
-      {"name": "AspectRatioBanker", "value": 7074}
-     ]
+       "name": "JS",
+       "id":0,
+       "children": [
+        {
+         "name": "Frontend",
+         "collapsed": true,
+         "id":1,
+         "children":[
+           {"name": "Cool Stuffs",
+            "id":4,
+            "children": [
+              {"name": "Angular"},
+              {"name": "React"},
+              {"name": "Redux"},
+              {"name": "Testing"}
+            ]
+            },
+           {"name": "HTML5"},
+           {"name": "CSS3"}
+         ]
+        },
+        {
+         "name": "Backend",
+         "collapsed": true,
+         "id":2,
+         "children":[
+           {"name": "Node",
+            "id":5,
+            "children": [
+              {"name": "Express"},
+              {"name": "Mongoose"}
+            ]
+            }
+         ]
+        },
+        {
+         "name": "Deployment",
+         "collapsed": true,
+         "id":3,
+         "children":[
+           {"name": "Firebase"}
+         ]
+        }
+      ]
     }
-   ]
-  },
-  {
-   "name": "animate",
-   "collapsed": true,
-   "children": [
-    {"name": "Easing", "value": 17010},
-    {"name": "FunctionSequence", "value": 5842},
-    {
-     "name": "interpolate",
-     "children": [
-      {"name": "ArrayInterpolator", "value": 1983},
-      {"name": "ColorInterpolator", "value": 2047},
-      {"name": "DateInterpolator", "value": 1375},
-      {"name": "Interpolator", "value": 8746},
-      {"name": "MatrixInterpolator", "value": 2202},
-      {"name": "NumberInterpolator", "value": 1382},
-      {"name": "ObjectInterpolator", "value": 1629},
-      {"name": "PointInterpolator", "value": 1675},
-      {"name": "RectangleInterpolator", "value": 2042}
-     ]
-    },
-    {"name": "ISchedulable", "value": 1041},
-    {"name": "Parallel", "value": 5176},
-    {"name": "Pause", "value": 449},
-    {"name": "Scheduler", "value": 5593},
-    {"name": "Sequence", "value": 5534},
-    {"name": "Transition", "value": 9201},
-    {"name": "Transitioner", "value": 19975},
-    {"name": "TransitionEvent", "value": 1116},
-    {"name": "Tween", "value": 6006}
-   ]
-  },
-  {
-   "name": "data",
-   "collapsed": true,
-   "children": [
-    {
-     "name": "converters",
-     "collapsed": true,
-     "children": [
-      {"name": "Converters", "value": 721},
-      {"name": "DelimitedTextConverter", "value": 4294},
-      {"name": "GraphMLConverter", "value": 9800},
-      {"name": "IDataConverter", "value": 1314},
-      {"name": "JSONConverter", "value": 2220}
-     ]
-    },
-    {"name": "DataField", "value": 1759},
-    {"name": "DataSchema", "value": 2165},
-    {"name": "DataSet", "value": 586},
-    {"name": "DataSource", "value": 3331},
-    {"name": "DataTable", "value": 772},
-    {"name": "DataUtil", "value": 3322}
-   ]
-  },
-  {
-   "name": "display",
-   "collapsed": true,
-   "children": [
-    {"name": "DirtySprite", "value": 8833},
-    {"name": "LineSprite", "value": 1732},
-    {"name": "RectSprite", "value": 3623},
-    {"name": "TextSprite", "value": 10066}
-   ]
-  },
-  {
-   "name": "flex",
-   "collapsed": true,
-   "children": [
-    {"name": "FlareVis", "value": 4116}
-   ]
-  },
-  {
-   "name": "physics",
-   "collapsed": true,
-   "children": [
-    {"name": "DragForce", "value": 1082},
-    {"name": "GravityForce", "value": 1336},
-    {"name": "IForce", "value": 319},
-    {"name": "NBodyForce", "value": 10498},
-    {"name": "Particle", "value": 2822},
-    {"name": "Simulation", "value": 9983},
-    {"name": "Spring", "value": 2213},
-    {"name": "SpringForce", "value": 1681}
-   ]
-  }
- ]
-}
     this.getTree();
   }
 
@@ -161,8 +85,8 @@ export class TreeGraph implements OnInit  {
              data: [this.treeData],
              top: '0%',
              left: '10%',
-             bottom: '2%',
-             right: '10%',
+             bottom: '0%',
+             right: '20%',
              symbolSize: 10,
              label: {
                normal: {
@@ -213,4 +137,61 @@ export class TreeGraph implements OnInit  {
          ]
        }
      }
+
+  onTreeEvent(event: any, type: string) {
+
+    console.log(event)
+
+    let data =[
+      {
+        title: "JS",
+        pie:[
+          {value:95, name:'Frontend'},
+          {value:80, name:'Backend'},
+          {value:75, name:'Devops'}
+        ]
+      },
+      {
+        title: "Frontend",
+        pie:[
+          {value:95, name:'Cool Stuffs'},
+          {value:80, name:'HTML5'},
+          {value:80, name:'CSS#'},
+        ]
+      },
+      {
+        title: "Backend",
+        pie:[
+          {value:80, name:'Node'},
+        ],
+      },
+      {
+        title: "Devops",
+        pie:[
+          {value:75, name:'Firebase'},
+        ]
+      },
+      {
+        title: "Cool Stuffs",
+        pie:[
+          {value:95, name:'Angular'},
+          {value:80, name:'React'},
+          {value:85, name:'Redux'},
+          {value:80, name:'Testing'}
+        ],
+      },
+      {
+        title:"Backend",
+        pie:[
+          {value:80, name:'Express'},
+          {value:70, name:'Mongoose'}
+        ]
+      }
+    ]
+
+      if(event.data.id)
+        this.jsComponent.tree_pie_data_emitter.emit(data[event.data.id])
+
+  }
+
 }

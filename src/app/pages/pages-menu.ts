@@ -13,7 +13,7 @@ export const MENU_ITEMS: NbMenuItem[] = [
     link: '/pages/projects',
   },
   {
-    title: 'Frameworks',
+    title: 'JS',
     icon: 'fa fa-code',
     link: '/pages/js',
   },
@@ -28,7 +28,7 @@ export const MENU_ITEMS: NbMenuItem[] = [
     link: '/pages/orgs',
   },
   {
-    title: 'Me',
+    title: 'Meeeh',
     icon: 'ion-person',
     link: '/pages/home',
   },

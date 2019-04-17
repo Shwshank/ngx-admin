@@ -7,6 +7,7 @@ import { LeafletModule } from '@asymmetrik/ngx-leaflet';
 import { HomeComponent } from './home.component';
 import { ThemeModule } from '../../@theme/theme.module';
 import { IntroParaComponent } from './intro-para/intro-para.component';
+import { PicsComponent } from './pics/pics.component';
 
 @NgModule({
   imports: [
@@ -18,7 +19,8 @@ import { IntroParaComponent } from './intro-para/intro-para.component';
   ],
   declarations:[
     HomeComponent,
-    IntroParaComponent
+    IntroParaComponent,
+    PicsComponent
   ],
   providers: [
 
