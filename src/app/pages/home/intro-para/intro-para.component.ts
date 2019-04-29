@@ -41,4 +41,15 @@ export class IntroParaComponent implements OnDestroy {
     this.themeSubscription.unsubscribe();
   }
 
+  github(){
+    window.open("https://www.github.com/Shwshank", "_blank")
+  }
+
+  stackoverflow(){
+    window.open("https://stackoverflow.com/users/7709912/shashank-b", "_blank")
+  }
+
+  linkedin(){
+    window.open("https://www.linkedin.com/in/shashank-bhattacharya-58aa6879/", "_blank")
+  }
 }

@@ -3,6 +3,7 @@ import { AfterViewInit, Component, Input, OnDestroy, OnInit } from '@angular/cor
 import { NbThemeService } from '@nebular/theme';
 import { LayoutService } from '../../../@core/utils';
 import { OutlineData } from '../../../@core/data/visitors-analytics';
+import { JsComponent } from "../../js/js.component"
 
 @Component({
   selector: 'ngx-pie-chart',
@@ -17,13 +18,28 @@ export class PieChartComponent implements OnInit  {
   option1: any;
   option2: any;
   treeData: any;
+  data1 : any = [];
+  title: any = "";
 
-  constructor() {
-
+  constructor(private jsComponent: JsComponent) {
+    this.data1 = [
+      {value:95, name:'Frontend'},
+      {value:80, name:'Backend'},
+      {value:75, name:'Devops'}
+    ]
+    this.title = "JS"
     this.getGraph();
   }
 
-  ngOnInit(){}
+  ngOnInit(){
+    this.jsComponent.tree_pie_data_emitter.subscribe(data=>{
+      console.log(data)
+      this.data1 = data.pie;
+      this.title = data.title
+
+      this.getGraph();
+    })
+  }
 
   getGraph() {
     this.option1 = {
@@ -35,25 +51,19 @@ export class PieChartComponent implements OnInit  {
 
           visualMap: {
               show: false,
-              min: 80,
-              max: 600,
+              min: 10,
+              max: 150,
               inRange: {
                   colorLightness: [0, 1]
               }
           },
           series : [
               {
-                  name:'Pie Chart',
+                  name:'Proficiency',
                   type:'pie',
                   radius : '85%',
                   center: ['50%', '50%'],
-                  data:[
-                      {value:335, name:'value 1'},
-                      {value:310, name:'value 2'},
-                      {value:274, name:'value 3'},
-                      {value:235, name:'value 4'},
-                      {value:400, name:'value 5'}
-                  ].sort(function (a, b) { return a.value - b.value; }),
+                  data: this.data1,
                   roseType: 'radius',
                   label: {
                       normal: {

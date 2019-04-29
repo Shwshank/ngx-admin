@@ -1,14 +1,9 @@
 <nb-card size="medium">
   <nb-card-header>
-    <div class="title">Visitors Analytics</div>
-    <div class="sub-title">Consumption</div>
+    <div class="title">My skill summary looks alike</div>
   </nb-card-header>
-  <nb-card-body>
-    <div class="chart-container">
-      <div class="chart-header">
-      </div>
-      <div class="tree-chart" echarts [options]="option2">
-      </div>
+  <nb-card-body style="padding:0px !important; margin:0px">
+    <div class="tree-chart" echarts [options]="option2" (chartClick)="onTreeEvent($event,'chartClick')">
     </div>
   </nb-card-body>
 </nb-card>

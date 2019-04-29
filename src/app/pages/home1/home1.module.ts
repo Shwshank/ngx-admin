@@ -27,7 +27,7 @@ import { SkillPara } from './skill-para/skill-para.component';
 import { AboutSummary } from './about-summary/about-summary.component';
 import { PieChartComponent } from './pie-chart/pie-chart.component';
 import { ProjectComponent } from './project/project.component';
-
+import { JsComponent } from "../js/js.component"
 
 @NgModule({
   imports: [
@@ -55,6 +55,6 @@ import { ProjectComponent } from './project/project.component';
     PieChartComponent,
     ProjectComponent
   ],
-  providers: [],
+  providers: [JsComponent],
 })
 export class Home1Module { }

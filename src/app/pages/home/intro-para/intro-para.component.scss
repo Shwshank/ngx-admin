@@ -2,6 +2,10 @@
 
 @include nb-install-component() {
 
+  .imageclick{
+    cursor: pointer;
+  }
+
   .profile-pic{
     width:10rem;
     height:10rem;
