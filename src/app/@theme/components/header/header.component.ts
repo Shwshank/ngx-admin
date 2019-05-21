@@ -44,4 +44,8 @@ export class HeaderComponent implements OnInit {
   startSearch() {
     this.analyticsService.trackEvent('startSearch');
   }
+
+  downloadResume() {
+    window.open("assets/ShashankB_Resume.pdf")
+  }
 }

@@ -15,11 +15,21 @@ export class ProjectComponent implements OnDestroy {
   selectedCamera: Camera;
   isSingleView = false;
 
+  projects = [
+    {title: "Mobile First Web Apps", source: "assets/images/project/pwa1.jpg"},
+    {title: "Progessive Web Apps", source: "assets/images/project/pwa.png"},
+    {title: "Coal India Project", source: "assets/images/project/coal1.png"},
+    {title: "Blockchain based project", source: "assets/images/project/nabl1.png"}
+  ]
+
   constructor(private securityCamerasService: SecurityCamerasData) {
     this.securityCamerasService.getCamerasData()
       .pipe(takeWhile(() => this.alive))
       .subscribe((cameras: Camera[]) => {
-        this.cameras = cameras;
+
+        // this.cameras = cameras;
+        this.cameras = this.projects;
+        console.log(this.cameras)
         this.selectedCamera = this.cameras[0];
       });
   }

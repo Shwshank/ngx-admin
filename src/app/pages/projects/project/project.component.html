@@ -1,7 +1,7 @@
 <nb-card size="xlarge">
   <nb-card-header>
     <div class="cameras-card-header">
-      <span class="cameras-card-title">Security Cameras</span>
+      <span class="cameras-card-title">Projects</span>
       <span class="cameras-filter">
         <a [class.active]="isSingleView" (click)="isSingleView = true">
           <i class="nb-square"></i>
@@ -15,13 +15,13 @@
   <nb-card-body>
     <div class="cameras single-view" *ngIf="isSingleView">
       <div class="camera" [style.background-image]="'url(' + selectedCamera.source + ')'">
-                <span>dsoasdf asfd asfd asdf asf asd fasdf dasasdfsdf asdf asdf asdfas dfas ddas fasdf s dfasfd asdf asdf asdf asdf asdf asdf adf asf asdf asdf asdf asdf asdf asdf asdf asdf asdf asdf asdf asf asdf adf asdf asdf asdf adfs</span>
+          <span>{{ selectedCamera.title }}</span>
       </div>
     </div>
     <div class="cameras" *ngIf="!isSingleView">
       <div class="camera col-sm-6" *ngFor="let camera of cameras" [style.background-image]="'url(' + camera.source + ')'"
            (click)="selectCamera(camera)">
-        <span>{{ camera.title }}</span>
+        <!-- <span>{{ camera.title }}</span> -->
       </div>
     </div>
   </nb-card-body>
