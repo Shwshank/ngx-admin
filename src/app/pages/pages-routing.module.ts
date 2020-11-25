@@ -19,9 +19,6 @@ const routes: Routes = [{
     path: 'home1',
     component: Home1Component,
   },{
-    path: 'projects',
-    component: ProjectsComponent,
-  },{
     path: 'skill',
     component: SkillComponent,
   },{

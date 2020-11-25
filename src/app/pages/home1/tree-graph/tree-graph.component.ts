@@ -32,14 +32,14 @@ export class TreeGraph implements OnInit  {
            {"name": "Cool Stuffs",
             "id":4,
             "children": [
-              {"name": "Angular"},
               {"name": "React"},
               {"name": "Redux"},
-              {"name": "Testing"}
+              {"name": "TDD"},
+              {"name": "Next.JS"},
             ]
             },
            {"name": "HTML5"},
-           {"name": "CSS3"}
+           {"name": "CSS3"},
          ]
         },
         {
@@ -51,17 +51,19 @@ export class TreeGraph implements OnInit  {
             "id":5,
             "children": [
               {"name": "Express"},
-              {"name": "Mongoose"}
+              {"name": "Mongoose"},
+              {"name": "Redis"},
             ]
             }
          ]
         },
         {
-         "name": "Deployment",
+         "name": "CICD",
          "collapsed": true,
          "id":3,
          "children":[
-           {"name": "Firebase"}
+           {"name": "Jenkins"},
+           {"name": "Gitlab"},
          ]
         }
       ]
@@ -140,15 +142,13 @@ export class TreeGraph implements OnInit  {
 
   onTreeEvent(event: any, type: string) {
 
-    console.log(event)
-
     let data =[
       {
         title: "JS",
         pie:[
           {value:95, name:'Frontend'},
           {value:80, name:'Backend'},
-          {value:75, name:'Devops'}
+          {value:75, name:'CICD'}
         ]
       },
       {
@@ -156,7 +156,7 @@ export class TreeGraph implements OnInit  {
         pie:[
           {value:95, name:'Cool Stuffs'},
           {value:80, name:'HTML5'},
-          {value:80, name:'CSS#'},
+          {value:80, name:'CSS3'},
         ]
       },
       {
@@ -166,25 +166,27 @@ export class TreeGraph implements OnInit  {
         ],
       },
       {
-        title: "Devops",
+        title: "CICD",
         pie:[
-          {value:75, name:'Firebase'},
+          {value:75, name:'Jenkins'},
+          {value:65, name:'Gitlab'},
         ]
       },
       {
         title: "Cool Stuffs",
         pie:[
-          {value:95, name:'Angular'},
           {value:80, name:'React'},
           {value:85, name:'Redux'},
-          {value:80, name:'Testing'}
+          {value:70, name:'TDD'},
+          {value:75, name:'Next.JS'},
         ],
       },
       {
         title:"Backend",
         pie:[
           {value:80, name:'Express'},
-          {value:70, name:'Mongoose'}
+          {value:70, name:'Mongoose'},
+          {value:60, name:'Redis'},
         ]
       }
     ]

@@ -8,11 +8,6 @@ export const MENU_ITEMS: NbMenuItem[] = [
     home: true,
   },
   {
-    title: 'Projects',
-    icon: 'fa fa-cubes',
-    link: '/pages/projects',
-  },
-  {
     title: 'JS',
     icon: 'fa fa-code',
     link: '/pages/js',

@@ -46,6 +46,6 @@ export class HeaderComponent implements OnInit {
   }
 
   downloadResume() {
-    window.open("assets/ShashankB_Resume.pdf")
+    window.open("assets/Shashank.pdf")
   }
 }

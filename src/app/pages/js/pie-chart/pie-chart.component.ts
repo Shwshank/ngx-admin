@@ -68,14 +68,14 @@ export class PieChartComponent implements OnInit  {
                   label: {
                       normal: {
                           textStyle: {
-                              color: 'rgba(255, 255, 255, 0.3)'
+                              color: 'gray'
                           }
                       }
                   },
                   labelLine: {
                       normal: {
                           lineStyle: {
-                              color: 'rgba(255, 255, 255, 0.3)'
+                              color: 'gray'
                           },
                           smooth: 0.2,
                           length: 5,

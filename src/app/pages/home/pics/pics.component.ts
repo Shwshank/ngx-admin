@@ -16,8 +16,8 @@ export class PicsComponent implements OnDestroy {
   cam: any = [
     {title: "", source: "assets/images/sam0.jpeg"},
     {title: "", source: "assets/images/sam1.jpg"},
-    {title: "", source: "assets/images/sam2.jpg"},
-    {title: "", source: "assets/images/sam3.jpg"}
+    {title: "", source: "assets/images/sam9.jpg"},
+    {title: "", source: "assets/images/sam6.jpg"}
   ];
 
   constructor() {

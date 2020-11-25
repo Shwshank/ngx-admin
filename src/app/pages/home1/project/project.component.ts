@@ -16,10 +16,34 @@ export class ProjectComponent implements OnDestroy {
   isSingleView = false;
 
   projects = [
-    {title: "Mobile First Web Apps", source: "assets/images/project/pwa1.jpg"},
-    {title: "Progessive Web Apps", source: "assets/images/project/pwa.png"},
-    {title: "Coal India Project", source: "assets/images/project/coal1.png"},
-    {title: "Blockchain based project", source: "assets/images/project/nabl1.png"}
+    {
+      title: "Ecommerce",
+      desc1:'Next.js based ecommerce platform',
+      desc2:'SEO Optimized pages and listing',
+      desc3:'GraphQL for database, reduces API calls and DNS lookup time',
+      source: "assets/images/project/ecommerce.png"
+    },
+    {
+      title: "Progresive Web Apps",
+      desc1:'Native app look & feel ',
+      desc2:'Strategies for Low-network/ no-network ',
+      desc3:'Never let users face Downasaurs. Delivered fast, responsive, highly engage-able platforms',
+      source: "assets/images/project/pwa.png"
+    },
+    {
+      title: "Data Visualization Dashboard",
+      desc1:'Extensively worked on data visualization platforms ',
+      desc2:'Resolved complicated use cases with interactive graphs and visual components',
+      desc3:'Libraries - D3, three.js, Echarts, MS PowerBI platform',
+      source: "assets/images/project/dashboard.gif"
+    },
+    {
+      title: "Real time asset tracking",
+      desc1:'GPS based live tracking of assets on dashboard',
+      desc2:'Real time server-client communication using Socket.io',
+      desc3:'Asset health monitoring using Microsoft IOT hub',
+      source: "assets/images/project/tracking.gif"
+    },
   ]
 
   constructor(private securityCamerasService: SecurityCamerasData) {
